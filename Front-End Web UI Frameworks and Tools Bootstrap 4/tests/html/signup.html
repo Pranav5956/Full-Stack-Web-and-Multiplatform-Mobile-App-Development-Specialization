@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Sign Up</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="../css/signup_login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row signin-box align-items-center shadow-lg rounded-lg">
+            <div id="signInBoxLeft" class="col-12 col-lg-7">
+                <form>
+                    <div class="form-row">
+                        <div class="col-12 text-center">
+                            <h4 class="form-text text-muted mt-0 mb-5">SIGN UP FOR YOUR ACCOUNT</h4>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-12 mb-0 col-md-9 mb-md-3 form-group">
+                            <div class="input-group">
+                                <span class="input-group-prepend">
+                                    <div class="input-group-text" title="Username"><span class="fa fa-user fa-fw"></span></div>
+                                </span>
+                                <input spellcheck="false" type="text" name="username" id="inputUsername" class="form-control" placeholder="Enter username" aria-describedby="#usernameInputHint" maxlength="20">
+                            </div>
+                            <small id="usernameInputHint" class="form-text text-muted">
+                                Username must not contain any special characters / spaces
+                            </small>
+                        </div>
+                        <div class="col-12 col-md-3 form-group text-center text-md-left">
+                            <small id="usernameValidityInfo" class="form-text text-success mt-md-2 d-none" aria-label="Username validity information">
+                                <span class="fa fa-check validation-icon"></span>
+                                <span role="alert">Enter Username</span>
+                            </small>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-12 mb-0 col-md-9 mb-md-3 form-group">
+                            <div class="input-group">
+                                <span class="input-group-prepend">
+                                    <div class="input-group-text" title="Email-ID"><span class="fa fa-envelope fa-fw"></span></div>
+                                </span>
+                                <input spellcheck="false" type="email" name="email" id="inputEmail" class="form-control" placeholder="Enter email address" aria-describedby="#emailInputHint">
+                            </div>
+                            <small id="emailInputHint" class="form-text text-muted">
+                                something@example.com
+                            </small>
+                        </div>
+                        <div class="col-12 col-md-3 form-group text-center text-md-left mt-0">
+                            <small id="emailValidityInfo" class="form-text text-success mt-md-2 d-none" aria-label="Email validity information">
+                                <span class="fa fa-check validation-icon"></span>
+                                <span role="alert">Enter Email</span>
+                            </small>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="col-12 col-xl-6">
+                            <div class="input-group form-group">
+                                <span class="input-group-prepend">
+                                    <div class="input-group-text" title="Password"><span class="fa fa-lock fa-fw"></span></div>
+                                </span>
+                                <input spellcheck="false" type="password" name="password" id="inputPassword" class="form-control" placeholder="Enter password" maxlength="20">
+                                <span class="input-group-append">
+                                    <div id="togglePasswordVisibility" class="input-group-text" title="Hide/Show Password"><span class="fa fa-eye-slash"></span></div>
+                                </span>
+                            </div>
+                            <div class="input-group form-group">
+                                <span class="input-group-prepend">
+                                    <div class="input-group-text" title="Confirm Password"><span class="fa fa-lock fa-fw"></span></div>
+                                </span>
+                                <input spellcheck="false" type="password" name="confirm-password" id="inputConfirmPassword" class="form-control" placeholder="Confirm password" maxlength="20">
+                                <span class="input-group-append">
+                                    <div id="toggleConfirmPasswordVisibility" class="input-group-text" title="Hide/Show Password"><span class="fa fa-eye-slash"></span></div>
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                <small id="confirmPasswordMatching" class="form-text text-danger text-center d-none" role="alert">
+                                    <span class="fa fa-warning"></span> Confirmation Password not matching
+                                </small>
+                            </div>
+                        </div>
+                        <div class="col-12 col-xl-6 d-flex justify-content-center">
+                            <div class="card bg-light">
+                                <div class="card-content col-12">
+                                    <div class="card-body p-3">
+                                        <p class="card-subtitle text-center">Password must contain</p>
+                                        <small id="passwordPolicyNumber" class="card-text text-danger d-block">
+                                            <span class="fa fa-times"></span> atleast one number.
+                                        </small>
+                                        <small id="passwordPolicyLowerCase" class="card-text text-danger d-block">
+                                            <span class="fa fa-times"></span> atleast one lower-case character.
+                                        </small>
+                                        <small id="passwordPolicyUpperCase" class="card-text text-danger d-block">
+                                            <span class="fa fa-times"></span> atleast one upper-case character.
+                                        </small>
+                                        <small id="passwordPolicySpecialCharacter" class="card-text text-danger d-block">
+                                            <span class="fa fa-times"></span> atleast one special character.
+                                        </small>
+                                        <small id="passwordPolicyLength" class="card-text text-danger d-block">
+                                            <span class="fa fa-times"></span> 6-20 characters.
+                                        </small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row mt-3">
+                        <div class="col-12">
+                            <div class="form-group form-check">
+                                <label for="agree" class="form-check-label">
+                                    <small class="form-text">
+                                        <input spellcheck="false" type="checkbox" name="agree" id="agree" class="form-check-input">
+                                        By signing up, you confirm that you have read and accepted our
+                                        <a href="#">Terms and Conditions</a> and
+                                        <a href="#">Privacy Policy</a>.
+                                    </small>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-row mt-2">
+                        <div class="col-10 offset-1 btn-group">
+                            <button type="submit" name="signup" id="submitSubmit" class="btn btn-secondary btn-block" disabled> Sign Up </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 col-lg-5">
+                <div class="text-center">
+                    <h4 class="text-muted mt-0 mb-5">OR</h4>
+                </div>
+                <div class="signin-buttons col-10 offset-1">
+                    <a class="btn btn-social btn-block btn-google" title="Sign up with Google" role="button">
+                        <span class="fa fa-google fa-fw"></span> Continue with Google
+                    </a>
+                    <a class="btn btn-social btn-block btn-facebook" title="Sign up with Facebook" role="button">
+                        <span class="fa fa-facebook fa-fw"></span> Continue with Facebook
+                    </a>
+                    <a class="btn btn-social btn-block btn-github" title="Sign up with Github" role="button">
+                        <span class="fa fa-github fa-fw"></span> Continue with Github
+                    </a>
+                    <a class="btn btn-social btn-block btn-linkedin" title="Sign up with LinkedIn" role="button">
+                        <span class="fa fa-linkedin fa-fw"></span> Continue with LinkedIn
+                    </a>
+                    <a class="btn btn-social btn-block btn-microsoft" title="Sign up with Microsoft" role="button">
+                        <span class="fa fa-windows fa-fw"></span> Continue with Microsoft
+                    </a>
+                </div>
+                <div class="links text-center mt-4">
+                    <a href="login.html">
+                        <small> Already have an account? Log In </small>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../js/signup.js"></script>
+</body>
+</html>

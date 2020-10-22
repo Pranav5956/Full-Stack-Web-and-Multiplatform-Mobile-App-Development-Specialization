@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Sign Up</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-10 offset-1 col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-6 offset-xl-3">
+                <div class="signin-box">
+                    <div class="text-center mb-4">
+                        <h5 class="text-muted">Sign Up for your Account</h5>
+                    </div>
+                    <form action="#" method="post">
+                        <!-- Username -->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-prepend">
+                                    <div class="input-group-text"><span class="fa fa-user fa-fw" title="Username" aria-hidden="true"></span></div>
+                                </span>
+                                <input type="text" id="username" class="form-control" name="username" placeholder="Username" aria-label="Enter username" maxlength="20">
+                                <span class="fa fa-check-circle-o fa-2x text-success ml-2"></span>
+                            </div>
+                        </div>
+                        <!-- Email -->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-prepend">
+                                    <div class="input-group-text"><span class="fa fa-envelope fa-fw" title="Email" aria-hidden="true"></span></div>
+                                </span>
+                                <input type="email" id="email" class="form-control" name="email" placeholder="Email" aria-label="Enter Email-ID">
+                                <a href="#" id="emailVerification" role="tooltip" data-toggle="tooltip" title="Valid Email-ID" data-placement="right"><span id="emailVerificationIcon" class="fa fa-check-circle-o fa-2x text-success ml-2"></span></a>
+                            </div>
+                        </div>
+                        <!-- Password -->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-prepend">
+                                    <div class="input-group-text"><span class="fa fa-lock fa-fw" title="Password" aria-hidden="true"></span></div>
+                                </span>
+                                <input type="password" id="password" class="form-control" name="password" placeholder="Password" maxlength="20">
+                                <span class="input-group-append">
+                                    <div class="input-group-text">
+                                        <span id="togglePasswordVisibility" class="fa fa-eye-slash" role="button" title="Show/Hide password"></span>
+                                    </div>
+                                </span>
+                            </div>
+                            <div id="passwordPolicy" class="password-policy d-none" role="tooltip">
+                                <ul class="list-unstyled offset-1">
+                                    <li>
+                                        <small class="form-text text-muted">Password must</small>
+                                    </li>
+                                    <li>
+                                        <small id="passwordLowerCase" class="form-text text-danger"><span class="fa fa-times"></span> Contain atleast one LowerCase Letter.</small>
+                                    </li>
+                                    <li>
+                                        <small id="passwordUpperCase" class="form-text text-danger"><span class="fa fa-times"></span> Contain atleast one UpperCase Letter.</small>
+                                    </li>
+                                    <li>
+                                        <small id="passwordSpecialCharacters" class="form-text text-danger"><span class="fa fa-times"></span> Contain atleast one Special Character.</small>
+                                    </li>
+                                    <li>
+                                        <small id="passwordNumber" class="form-text text-danger"><span class="fa fa-times"></span> Contain atleast one Number.</small>
+                                    </li>
+                                    <li>
+                                        <small id="passwordLength" class="form-text text-danger"><span class="fa fa-times"></span> Contain 6-20 characters.</small>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Confirm Password -->
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-prepend">
+                                    <div class="input-group-text"><span class="fa fa-lock fa-fw" title="Confirm Password" aria-hidden="true"></span></div>
+                                </span>
+                                <input type="password" id="confirmPassword" class="form-control" name="confirm-password" placeholder="Confirm Password" maxlength="20">
+                                <span class="input-group-append">
+                                    <div class="input-group-text">
+                                        <span id="toggleConfirmPasswordVisibility" class="fa fa-eye-slash" role="button" title="Show/Hide password"></span>
+                                    </div>
+                                </span>
+                            </div>
+                            <small id="passwordErrorLabel" class="form-text text-danger text-center d-none" aria-label="Incorrect password">Incorrect password confirmation.</small>
+                        </div>
+                        <div class="form-group">
+                            <div class="form-check">
+                                <input type="checkbox" name="agree" id="agree" class="form-check-input">
+                                <label for="agree" class="font-text text-muted">
+                                    By signing up, you confirm that you have read and accepted our <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="btn-group col">
+                            <button type="submit" class="btn btn-secondary" disabled>Sign Up</button>
+                        </div>
+                    </form>
+
+                    <div class="col text-center">
+                        <p class="text-muted pt-3 pd-1">OR</p>
+                    </div>
+
+                    <div class="col text-center">
+                        <a class="btn btn-social-icon btn-google" title="Sign in with Google">
+                            <span class="fa fa-google"></span> 
+                        </a>
+                        <a class="btn btn-social-icon btn-twitter" title="Sign in with Twitter">
+                            <span class="fa fa-twitter"></span> 
+                        </a>
+                        <a class="btn btn-social-icon btn-facebook" title="Sign in with Facebook">
+                            <span class="fa fa-facebook"></span> 
+                        </a>
+                        <a class="btn btn-social-icon btn-github" title="Sign in with GitHub">
+                            <span class="fa fa-github"></span> 
+                        </a>
+                        <a class="btn btn-social-icon btn-linkedin" title="Sign in with LinkedIn">
+                            <span class="fa fa-linkedin"></span> 
+                        </a>
+                        <a class="btn btn-social-icon btn-microsoft" title="Sign in with Microsoft">
+                            <span class="fa fa-windows"></span> 
+                        </a>
+                    </div>
+
+                    <div class="col text-center">
+                        <hr class="style1">
+                        <div class="text-center">
+                            <a href="login.html">
+                                <small>Already have an account? Log In</small>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>
