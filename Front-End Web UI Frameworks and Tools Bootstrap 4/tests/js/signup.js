@@ -1,12 +1,13 @@
-var email_regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-var lowercase_regex = /[a-z]/;
-var uppercase_regex = /[A-Z]/;
-var special_characters_regex = /[^A-Za-z0-9\s]/;
-var number_regex = /[1-9]/;
-var whitespace_regex = /\s+/;
-
-var existing_usernames = ['Pranav5956', 'AbhinavBalaji'];
-var existing_emails = ['pranavbalaji01@gmail.com', 'abhi07055']
+var 
+    email_regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+    lowercase_regex = /[a-z]/,
+    uppercase_regex = /[A-Z]/,
+    special_characters_regex = /[^A-Za-z0-9\s]/,
+    number_regex = /[1-9]/,
+    username_regex = /[^A-Za-z0-9\s_]/,
+    existing_users = [],
+    existing_usernames = [],
+    existing_emails = [];
 
 // Utility function
 $.fn.replaceClass = function(existing_classes, new_classes) {
@@ -14,6 +15,16 @@ $.fn.replaceClass = function(existing_classes, new_classes) {
 };
 
 jQuery(function() {
+    // Get the already registered users
+    $.ajax("../registeredUsers.json")
+    .done(function(registered_users) {
+        $.each(existing_users, function(index, user) {
+            existing_users.push(user);
+            existing_usernames.push(user['Username']);
+            existing_emails.push(user['Email']);
+        });
+    });
+
     // Toggle Password visibility
     $("#togglePasswordVisibility").on("click", function() {
         if ($("#inputPassword").attr("type") == "text") {
@@ -56,20 +67,26 @@ jQuery(function() {
     // Username validation
     $("#inputUsername").on('change', function() {
         $('#usernameValidityInfo').replaceClass("text-success text-danger d-none", "text-primary")
-        .children('span.validation-icon').replaceClass("fa fa-check fa-times", "spinner-border spinner-border-sm").next().text('Validating');
+        .children('span.validation-icon').replaceClass("fa fa-check fa-times", "spinner-border spinner-border-sm")
+        .next().text('Validating');
+
         setTimeout(function(username) {
             if (username == "") {
                 $('#usernameValidityInfo').replaceClass("text-primary text-success text-danger", "d-none")
-                .children('span.validation-icon').replaceClass("spinner-border spinner-border-sm fa-check fa-times fa", "").next().text('');
-            } else if (whitespace_regex.test(username) || special_characters_regex.test(username)) {
+                .children('span.validation-icon').replaceClass("spinner-border spinner-border-sm fa-check fa-times fa", "")
+                .next().text('');
+            } else if (username_regex.test(username)) {
                 $('#usernameValidityInfo').replaceClass("text-primary text-success d-none", "text-danger")
-                .children('span.validation-icon').replaceClass("spinner-border spinner-border-sm fa-check", "fa fa-times").next().text('Invalid Username');
+                .children('span.validation-icon').replaceClass("spinner-border spinner-border-sm fa-check", "fa fa-times")
+                .next().text('Invalid Username');
             } else if (existing_usernames.includes(username)) {
                 $('#usernameValidityInfo').replaceClass("text-primary text-success d-none", "text-danger")
-                .children('span.validation-icon').replaceClass("spinner-border spinner-border-sm fa-check", "fa fa-times").next().text('Username exists');
+                .children('span.validation-icon').replaceClass("spinner-border spinner-border-sm fa-check", "fa fa-times")
+                .next().text('Username exists');
             } else {
                 $('#usernameValidityInfo').replaceClass("text-primary text-danger d-none", "text-success")
-                .children('span.validation-icon').replaceClass("spinner-border spinner-border-sm fa-times", "fa fa-check").next().text('Valid Username');
+                .children('span.validation-icon').replaceClass("spinner-border spinner-border-sm fa-times", "fa fa-check")
+                .next().text('Valid Username');
             }
         }, ($(this).val() != "") * 800, $(this).val());
     });
@@ -77,20 +94,26 @@ jQuery(function() {
     // Email validation
     $("#inputEmail").on('change', function() {
         $('#emailValidityInfo').replaceClass("text-success text-danger d-none", "text-primary")
-        .children('span.validation-icon').replaceClass("fa fa-check fa-times", "spinner-border spinner-border-sm").next().text('Validating');
+        .children('span.validation-icon').replaceClass("fa fa-check fa-times", "spinner-border spinner-border-sm")
+        .next().text('Validating');
+
         setTimeout(function(email) {
             if (email == "") {
                 $('#emailValidityInfo').replaceClass("text-primary text-success text-danger", "d-none")
-                .children('span.validation-icon').replaceClass("spinner-border spinner-border-sm fa-check fa-times fa", "").next().text('');
+                .children('span.validation-icon').replaceClass("spinner-border spinner-border-sm fa-check fa-times fa", "")
+                .next().text('');
             } else if (!email_regex.test(email)) {
                 $('#emailValidityInfo').replaceClass("text-primary text-success d-none", "text-danger")
-                .children('span.validation-icon').replaceClass("spinner-border spinner-border-sm fa-check", "fa fa-times").next().text('Invalid Email-ID');
+                .children('span.validation-icon').replaceClass("spinner-border spinner-border-sm fa-check", "fa fa-times")
+                .next().text('Invalid Email-ID');
             } else if (existing_emails.includes(email)) {
                 $('#emailValidityInfo').replaceClass("text-primary text-success d-none", "text-danger")
-                .children('span.validation-icon').replaceClass("spinner-border spinner-border-sm fa-check", "fa fa-times").next().text('Email-ID exists');
+                .children('span.validation-icon').replaceClass("spinner-border spinner-border-sm fa-check", "fa fa-times")
+                .next().text('Email-ID exists');
             } else {
                 $('#emailValidityInfo').replaceClass("text-primary text-danger d-none", "text-success")
-                .children('span.validation-icon').replaceClass("spinner-border spinner-border-sm fa-times", "fa fa-check").next().text('Valid Email-ID');
+                .children('span.validation-icon').replaceClass("spinner-border spinner-border-sm fa-times", "fa fa-check")
+                .next().text('Valid Email-ID');
             }
         }, ($(this).val() != "") * 800, $(this).val());
     });

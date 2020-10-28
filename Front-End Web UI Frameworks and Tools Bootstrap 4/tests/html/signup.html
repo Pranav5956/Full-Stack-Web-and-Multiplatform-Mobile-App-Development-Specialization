@@ -15,7 +15,7 @@
     <div class="container">
         <div class="row signin-box align-items-center shadow-lg rounded-lg">
             <div id="signInBoxLeft" class="col-12 col-lg-7">
-                <form>
+                <form id="formSignup" action="#" method="POST">
                     <div class="form-row">
                         <div class="col-12 text-center">
                             <h4 class="form-text text-muted mt-0 mb-5">SIGN UP FOR YOUR ACCOUNT</h4>
@@ -30,7 +30,7 @@
                                 <input spellcheck="false" type="text" name="username" id="inputUsername" class="form-control" placeholder="Enter username" aria-describedby="#usernameInputHint" maxlength="20">
                             </div>
                             <small id="usernameInputHint" class="form-text text-muted">
-                                Username must not contain any special characters / spaces
+                                Username must not contain any special characters except underscores '_'
                             </small>
                         </div>
                         <div class="col-12 col-md-3 form-group text-center text-md-left">
@@ -126,7 +126,7 @@
                     </div>
                     <div class="form-row mt-2">
                         <div class="col-10 offset-1 btn-group">
-                            <button type="submit" name="signup" id="submitSubmit" class="btn btn-secondary btn-block" disabled> Sign Up </button>
+                            <button type="submit" name="signup" id="submitSubmit" class="btn btn-secondary btn-block" disabled> SIGN UP </button>
                         </div>
                     </div>
                 </form>
@@ -137,22 +137,22 @@
                 </div>
                 <div class="signin-buttons col-10 offset-1">
                     <a class="btn btn-social btn-block btn-google" title="Sign up with Google" role="button">
-                        <span class="fa fa-google fa-fw"></span> Continue with Google
+                        <span class="fa fa-google fa-fw"></span> Sign up with Google
                     </a>
                     <a class="btn btn-social btn-block btn-facebook" title="Sign up with Facebook" role="button">
-                        <span class="fa fa-facebook fa-fw"></span> Continue with Facebook
+                        <span class="fa fa-facebook fa-fw"></span> Sign up with Facebook
                     </a>
                     <a class="btn btn-social btn-block btn-github" title="Sign up with Github" role="button">
-                        <span class="fa fa-github fa-fw"></span> Continue with Github
+                        <span class="fa fa-github fa-fw"></span> Sign up with Github
                     </a>
                     <a class="btn btn-social btn-block btn-linkedin" title="Sign up with LinkedIn" role="button">
-                        <span class="fa fa-linkedin fa-fw"></span> Continue with LinkedIn
+                        <span class="fa fa-linkedin fa-fw"></span> Sign up with LinkedIn
                     </a>
                     <a class="btn btn-social btn-block btn-microsoft" title="Sign up with Microsoft" role="button">
-                        <span class="fa fa-windows fa-fw"></span> Continue with Microsoft
+                        <span class="fa fa-windows fa-fw"></span> Sign up with Microsoft
                     </a>
                 </div>
-                <div class="links text-center mt-4">
+                <div class="text-center mt-4">
                     <a href="login.html">
                         <small> Already have an account? Log In </small>
                     </a>
@@ -162,7 +162,7 @@
     </div>
 
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
-    <script src="../node_modules/jquery/dist/jquery.slim.min.js"></script>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
     <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../js/signup.js"></script>

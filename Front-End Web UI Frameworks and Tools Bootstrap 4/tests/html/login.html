@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Login</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-social/bootstrap-social.css">
+    <link rel="stylesheet" href="../css/signup_login.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-lg-6 offset-lg-3">
+                <div class="signin-box align-items-center shadow-lg rounded-lg py-4">
+                    <div class="form-container">
+                        <form id="formLogin" action="#" method="post">
+                            <div class="form-row">
+                                <div class="col-12 text-center">
+                                    <h4 class="form-text text-muted mt-0 mb-4">LOGIN TO YOUR ACCOUNT</h4>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-10 offset-1 col-lg-8 offset-lg-2">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text" title="Enter email">
+                                                <span class="fa fa-envelope fa-fw"></span>
+                                            </div>
+                                        </div>
+                                        <input id="inputEmail" type="email" name="email" class="form-control" placeholder="Enter email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-10 offset-1 col-lg-8 offset-lg-2">
+                                    <div class="input-group">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text" title="Enter password">
+                                                <span class="fa fa-lock fa-fw"></span>
+                                            </div>
+                                        </div>
+                                        <input id="inputPassword" type="password" name="password" class="form-control" placeholder="Enter password">
+                                        <div class="input-group-append">
+                                            <div class="input-group-text" title="Hide/Show password">
+                                                <span class="fa fa-eye-slash"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-10 offset-1 col-lg-8 offset-lg-2 text-center">
+                                    <div class="form-check form-group">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" name="remember-me" id="checkRememberMe" class="form-check-input">
+                                            Remember Me?
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="col-10 offset-1 col-lg-8 offset-lg-2 text-center">
+                                    <small class="text-danger text-center d-none" aria-label="Login error details">Invalid email</small>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="btn-group col-10 offset-1 col-lg-8 offset-lg-2">
+                                    <button type="submit" class="btn btn-primary">LOGIN</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="alternate-links">
+                        <div class="row">
+                            <div class="links mt-2 col-10 offset-1 text-center">
+                                <a href="signup.html" class="col">
+                                    <small> Sign up for an account </small>
+                                </a>
+                                <a href="#" class="col">
+                                    <small> Forgot password </small>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <h4 class="text-muted mt-2 mb-3">OR</h4>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="signin-buttons col-10 offset-1 col-lg-8 offset-lg-2">
+                                <a class="btn btn-social btn-block btn-google" title="Continue with Google" role="button">
+                                    <span class="fa fa-google fa-fw"></span> Continue with Google
+                                </a>
+                                <a class="btn btn-social btn-block btn-facebook" title="Continue with Facebook" role="button">
+                                    <span class="fa fa-facebook fa-fw"></span> Continue with Facebook
+                                </a>
+                                <a class="btn btn-social btn-block btn-github" title="Continue with Github" role="button">
+                                    <span class="fa fa-github fa-fw"></span> Continue with Github
+                                </a>
+                                <a class="btn btn-social btn-block btn-linkedin" title="Continue with LinkedIn" role="button">
+                                    <span class="fa fa-linkedin fa-fw"></span> Continue with LinkedIn
+                                </a>
+                                <a class="btn btn-social btn-block btn-microsoft" title="Continue with Microsoft" role="button">
+                                    <span class="fa fa-windows fa-fw"></span> Continue with Microsoft
+                                </a>
+                            </div>
+                        </div>
+                        <div class="row text-center mb-0">
+                            <small class="text-muted col-10 offset-1">
+                                By logging in, you confirm that you have read and accepted our
+                                <a href="#">Terms and Conditions</a> and
+                                <a href="#">Privacy Policy</a>.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../js/signup.js"></script>
+</body>
+</html>
