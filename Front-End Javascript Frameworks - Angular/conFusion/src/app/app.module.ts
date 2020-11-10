@@ -39,6 +39,7 @@ import { DishdetailComponent } from './dishdetail/dishdetail.component';
 // Services
 import { DishService } from './services/dish.service';
 import { PromotionService } from './services/promotion.service';
+import { ProcessHTTPMsgService } from './services/process-httpmsg.service';
 import { LeaderService } from './services/leader.service';
 import { LoginComponent } from './login/login.component';
 
@@ -80,6 +81,7 @@ import { LoginComponent } from './login/login.component';
     DishService,
     PromotionService,
     LeaderService,
+    ProcessHTTPMsgService,
     { provide: 'BaseURL', useValue: BaseURL}
   ],
   entryComponents: [
