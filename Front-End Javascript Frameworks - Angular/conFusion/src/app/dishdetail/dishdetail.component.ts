@@ -17,6 +17,7 @@ export class DishdetailComponent implements OnInit {
   dish: Dish;
   errMess: string;
   dishIds: string[];
+  dishCopy: Dish;
   prev: string;
   next: string;
 
@@ -53,6 +54,7 @@ export class DishdetailComponent implements OnInit {
       .subscribe(
         dish => {
           this.dish = dish;
+          this.dishCopy = dish;
           this.setPrevNext(dish.id);
         },
         errmess => this.errMess = errmess
@@ -105,8 +107,19 @@ export class DishdetailComponent implements OnInit {
       date: date.toISOString()
     };
 
-    this.dish.comments.push(comment);
-    console.log(comment);
+    this.dishCopy.comments.push(comment);
+    this.dishService.putDish(this.dishCopy)
+      .subscribe(
+        dish => {
+          this.dish = dish;
+          this.dishCopy = dish;
+        },
+        errmess => {
+          this.dish = null;
+          this.dishCopy = null;
+          this.errMess = errmess;
+        }
+      );
 
     this.commentFormDerivative.resetForm();
     this.commentForm.reset({
