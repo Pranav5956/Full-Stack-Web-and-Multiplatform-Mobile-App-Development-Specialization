@@ -224,5 +224,96 @@
       "description": "Award winning three-star Michelin chef with wide International experience having worked closely with whos-who in the culinary world, he specializes in creating mouthwatering Indo-Italian fusion experiences. He says, Put together the cuisines from the two craziest cultures, and you get a winning hit! Amma Mia!"
     }
   ],
-  "feedback": []
+  "feedback": [
+    {
+      "firstname": "Pranav",
+      "lastname": "Balaji",
+      "telnum": 0,
+      "email": "pbj@gmail.com",
+      "agree": false,
+      "contacttype": "None",
+      "message": "",
+      "id": 1
+    },
+    {
+      "firstname": "Pranav",
+      "lastname": "Balaji",
+      "telnum": 0,
+      "email": "pbj@gmail.com",
+      "agree": false,
+      "contacttype": "None",
+      "message": "",
+      "id": 2
+    },
+    {
+      "firstname": "Pranav",
+      "lastname": "Balaji",
+      "telnum": 0,
+      "email": "pbj@gmail.com",
+      "agree": false,
+      "contacttype": "None",
+      "message": "",
+      "id": 3
+    },
+    {
+      "firstname": "Pranav",
+      "lastname": "Balaji",
+      "telnum": 0,
+      "email": "pbj@gmail.com",
+      "agree": false,
+      "contacttype": "None",
+      "message": "",
+      "id": 4
+    },
+    {
+      "firstname": "Pranav",
+      "lastname": "Balaji",
+      "telnum": 0,
+      "email": "pbj@gmail.com",
+      "agree": false,
+      "contacttype": "None",
+      "message": "",
+      "id": 5
+    },
+    {
+      "firstname": "Pranav",
+      "lastname": "Balaji",
+      "telnum": 0,
+      "email": "pbj@gmail.com",
+      "agree": false,
+      "contacttype": "None",
+      "message": "",
+      "id": 6
+    },
+    {
+      "firstname": "Pranav",
+      "lastname": "Balaji",
+      "telnum": 0,
+      "email": "pbj@gmail.com",
+      "agree": false,
+      "contacttype": "None",
+      "message": "",
+      "id": 7
+    },
+    {
+      "firstname": "Pranav",
+      "lastname": "Balaji",
+      "telnum": 0,
+      "email": "pbj@gmail.com",
+      "agree": true,
+      "contacttype": "Tel",
+      "message": "This is great!",
+      "id": 8
+    },
+    {
+      "firstname": "Pranav",
+      "lastname": "Balaji",
+      "telnum": 0,
+      "email": "pbj@gmail.com",
+      "agree": false,
+      "contacttype": "Tel",
+      "message": "",
+      "id": 9
+    }
+  ]
 }
